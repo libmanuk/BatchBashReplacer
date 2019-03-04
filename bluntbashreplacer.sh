@@ -13,9 +13,10 @@ inFile="<name of file to search in>"
 
 if grep -lq "<search_string>" $inFile ; then
     true
+    replaceCmd "<search_string>" "$inFile" "<replace_string>"
+    shopt -s extglob
+    rm !(*.txt|*.sh|*.bat|*.sql)
 else
     echo "<search_string> not found!  Could not use replace text <replace_string>" >> log.txt
 fi
-replaceCmd "<search_string>" "$inFile" "<replace_string>"
-shopt -s extglob
-rm !(*.txt|*.sh|*.bat|*.sql)
+
