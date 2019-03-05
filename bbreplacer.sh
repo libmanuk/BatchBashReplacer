@@ -2,7 +2,7 @@
 #Blunt Bash Replacer
 #Copyright Eric C. Weig, 2019
 
-# usage: bash bluntbashreplacer.sh search_string replace_string filename.txt
+# usage: bash bbreplacer.sh search_string replace_string filename.txt
 
 # search and replace function
 replaceCmd(){
