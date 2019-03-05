@@ -11,13 +11,15 @@ replaceCmd(){
 
 # file to perform search and replace in
 inFile="<name of file to search in>"
+search="$1"
+replace="$2"
 
 # check to see if the search string can be found in the file
 # return true and perform the desired search and replace, or
 # output unsuccessful search details to log file
-if grep -lq "<search_string>" $inFile ; then
+if grep -lq "$search" $inFile ; then
     true
-    replaceCmd "<search_string>" "$inFile" "<replace_string>"
+    replaceCmd "$search" "$inFile" "$replace"
     shopt -s extglob
     rm !(*.txt|*.sh|*.bat|*.sql)
 else
