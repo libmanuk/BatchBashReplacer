@@ -2,6 +2,8 @@
 #Blunt Bash Replacer
 #Copyright Eric C. Weig, 2019
 
+# usage: bash bluntbashreplacer.sh <search_string> <replace_string> <file>
+
 # search and replace function
 replaceCmd(){
 
@@ -9,8 +11,8 @@ replaceCmd(){
 
 }
 
-# file to perform search and replace in
-inFile="<name of file to search in>"
+# use arguments to set variables
+inFile="$3"
 search="$1"
 replace="$2"
 
@@ -19,10 +21,13 @@ replace="$2"
 # output unsuccessful search details to log file
 if grep -lq "$search" $inFile ; then
     true
-    replaceCmd "$search" "$inFile" "$replace"
-    shopt -s extglob
-    rm !(*.txt|*.sh|*.bat|*.sql)
 else
-    echo "<search_string> not found!  Could not use replace text <replace_string>" >> log.txt
+    echo "$search not found!  Could not use replace text $replace" >> log.txt
 fi
 
+# perform the replace function
+replaceCmd "$search" "$inFile" "$replace"
+shopt -s extglob
+
+# remove any file from the directory that are not of the following types; .txt, .sh, .bat, .sql
+rm !(*.txt|*.sh|*.bat|*.sql)
