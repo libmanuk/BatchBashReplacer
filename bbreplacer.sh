@@ -29,5 +29,5 @@ fi
 replaceCmd "$search" "$inFile" "$replace"
 shopt -s extglob
 
-# remove any file from the directory that are not of the following types; .txt, .sh, .bat, .sql
+# remove any files from the directory that are not of the following types; .txt, .sh, .bat, .sql
 rm !(*.txt|*.sh|*.bat|*.sql)
