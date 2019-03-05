@@ -11,5 +11,9 @@ Simple shell program that can be used to perform batch replacements within a fil
 
 usage: bash bbreplacer.sh search_string replace_string filename.txt
 
+## Tips
+
+Start off by using an empty directory.  It should include three files; filename.txt, bbreplacer.sh, batch.sh
+
 ## License
 This software on this site is provided "as-is," without any express or implied warranty. In no event shall libmanuk be held liable for any damages arising from the use of the software.
