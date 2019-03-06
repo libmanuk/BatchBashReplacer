@@ -4,6 +4,13 @@
 
 # usage: bash bbreplacer.sh search_string replace_string filename.txt
 
+# check for the appropriate number of arguments before proceeding
+if [ "$#" -ne 3 ]; then
+
+echo "ERROR: Illegal number of arguments."
+
+else
+
 # search and replace function
 replaceCmd(){
 
@@ -31,3 +38,5 @@ shopt -s extglob
 
 # remove any files from the directory that are not of the following types; .txt, .sh, .bat, .sql
 rm !(*.txt|*.sh|*.bat|*.sql)
+
+fi
