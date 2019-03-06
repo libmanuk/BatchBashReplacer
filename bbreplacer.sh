@@ -5,9 +5,9 @@
 # usage: bash bbreplacer.sh search_string replace_string filename.txt
 
 # check for the appropriate number of arguments before proceeding
-if [ "$#" -ne 3 ]; then
+if (( $# != 3 )); then
 
-echo "ERROR: Illegal number of arguments."
+echo "ERROR: Illegal number of parameters.  Please provide the 3 required paremeters."
 
 else
 
