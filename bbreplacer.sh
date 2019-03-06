@@ -1,5 +1,5 @@
 #!/bin/bash
-#Blunt Bash Replacer
+#Batch Bash Replacer
 #Copyright Eric C. Weig, 2019
 
 # usage: bash bbreplacer.sh search_string replace_string filename.txt
